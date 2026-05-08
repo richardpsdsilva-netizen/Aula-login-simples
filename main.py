@@ -60,7 +60,7 @@ def cadastrar_usuario(
             {"request": request, "erro": "Email já cadastrado."}
         )
     #criar um objeto
-    novo_usuario = Usuario(email=email, senha=senha, nome=nome, )
+    novo_usuario = Usuario(email=email, senha=senha, nome=nome)
     db.add(novo_usuario)
     db.commit()
 
@@ -72,7 +72,6 @@ def fazer_login(
     request: Request,
     email: str = Form(...),
     senha: str = Form(...),
-    nome : str = Form(...),
     db: Session = Depends(get_db)
 ):
    
