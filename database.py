@@ -26,6 +26,8 @@ class Usuario(Base):
     # Define a coluna senha: texto de até 100 caracteres, também obrigatória
     senha = Column(String(100), nullable=False)
 
+    nome = Column(String(100))
+
 # Puxa a string de conexão (ex: postgresql://user:password@localhost/dbname) das variáveis de ambiente
 DATABASE_URL = os.getenv("DATABASE_URL")
 
