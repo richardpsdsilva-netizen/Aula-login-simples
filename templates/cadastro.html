@@ -3,16 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Cadastro</title>
+    <title>SENAI - Cadastro</title>
+    <style>
+        /* Definindo as cores do padrão SENAI */
+        :root {
+            --senai-blue: #0054a6;
+            --senai-red: #ed1c24;
+            --senai-gray: #f4f4f4;
+            --senai-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--senai-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            border-top: 6px solid var(--senai-blue);
+        }
+
+        h1 {
+            color: var(--senai-blue);
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--senai-dark);
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--senai-blue);
+            box-shadow: 0 0 5px rgba(0, 84, 166, 0.2);
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--senai-blue);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #003d7a;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: var(--senai-red);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-placeholder {
+            text-align: center;
+            font-weight: 900;
+            font-size: 24px;
+            color: var(--senai-blue);
+            margin-bottom: 10px;
+        }
+        
+        .logo-placeholder span {
+            color: var(--senai-red);
+        }
+    </style>
 </head>
 <body>
-    <h1>Cadastro</h1>
 
-    <form action="/cadastro" method="post"></form>
-    Email: <input type="email" name="email">
-    <br><br>
-    senha: <input type="password" name = "senha">
-    <br><br>
-    <button type="submit">Cadastrar</button>
+    <div class="container">
+        <div class="logo-placeholder">SENAI<span>.</span></div>
+        <h2></h2>
+        <h1>Cadastro</h1>
+
+        <form action="/cadastro" method="post">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit">CADASTRAR</button>
+        </form>
+
+        <div class="footer-links">
+            <a href="/login">Já tenho uma conta? Entrar</a>
+        </div>
+    </div>
+
 </body>
 </html>

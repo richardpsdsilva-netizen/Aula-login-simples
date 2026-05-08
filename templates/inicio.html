@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Portal SENAI</title>
+    <style>
+        :root {
+            --senai-blue: #0054a6;
+            --senai-red: #ed1c24;
+            --senai-white: #ffffff;
+            --senai-dark: #1a1a1a;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* Evita rolagem na tela de entrada */
+        }
+
+        /* Fundo com degradê moderno usando as cores da marca */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--senai-blue) 0%, #003366 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Detalhe estético: faixa vermelha característica */
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: var(--senai-red);
+        }
+
+        .logo-main {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .logo-main span {
+            color: var(--senai-red);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.4;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-login {
+            background-color: var(--senai-white);
+            color: var(--senai-blue);
+            border: 2px solid var(--senai-white);
+        }
+
+        .btn-login:hover {
+            background-color: transparent;
+            color: var(--senai-white);
+        }
+
+        .btn-register {
+            background-color: transparent;
+            color: var(--senai-white);
+            border: 2px solid var(--senai-white);
+        }
+
+        .btn-register:hover {
+            background-color: var(--senai-red);
+            border-color: var(--senai-red);
+        }
+
+        /* Pequeno texto de rodapé */
+        .footer-text {
+            position: absolute;
+            bottom: 30px;
+            font-size: 12px;
+            opacity: 0.7;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="logo-main">SENAI<span>.</span></div>
+        <h1><br><strong></strong></h1>
+
+        <div class="button-group">
+            <a href="/login" class="btn btn-login">Acessar Conta</a>
+            <a href="/cadastro" class="btn btn-register">Novo Cadastro</a>
+        </div>
+
+        <div class="footer-text">
+            &copy; 2026 SERVIÇO NACIONAL DE APRENDIZAGEM INDUSTRIAL
+        </div>
+    </div>
+
+</body>
+</html>

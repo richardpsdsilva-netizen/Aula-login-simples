@@ -14,6 +14,7 @@ templates = Jinja2Templates(directory = "templates")
 
 #Rota - metodo HTTP (get , post)
 
+#Tela de cadastro
 @app.get("/cadastro")
 def tela_cadastro(request:Request):
     return templates.TemplateResponse(
@@ -21,12 +22,20 @@ def tela_cadastro(request:Request):
         "cadastro.html",
         {"request": request}
     )
-
-app.get("/login")
+#Tela de login
+@app.get("/login")
 def tela_login(request: Request):
      return templates.TemplateResponse(
         request,
         "login.html",
         {"request": request}
     )
+@app.get("/")
+def tela_login(request: Request):
+     return templates.TemplateResponse(
+        request,
+        "inicio.html",
+        {"request": request}
+    )
+
     
