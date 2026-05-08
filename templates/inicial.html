@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal SENAI - Início</title>
+    <style>
+        :root {
+            --senai-blue: #0054a6;
+            --senai-red: #ed1c24;
+            --senai-bg: #f8f9fa;
+            --senai-text: #333;
+            --senai-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--senai-bg);
+            color: var(--senai-text);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Barra de Navegação Superior */
+        header {
+            background-color: var(--senai-blue);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span { color: var(--senai-red); }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Seção de Boas-vindas */
+        .hero {
+            background-color: var(--senai-white);
+            padding: 60px 5%;
+            border-bottom: 5px solid var(--senai-red);
+            text-align: left;
+        }
+
+        .hero h1 {
+            color: var(--senai-blue);
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Grid de Conteúdo */
+        .container {
+            padding: 40px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--senai-blue);
+        }
+
+        .card h3 {
+            color: var(--senai-blue);
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .btn-action {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--senai-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .btn-action:hover {
+            background-color: #003d7a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 13px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SENAI<span>.</span></div>
+        <nav>
+            <a href="/login">Login</a>
+            <a href="/cadastro">Cadastro</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Bem-vindo ao Portal da Indústria</h1>
+        <p>Sua jornada rumo à excelência profissional começa aqui.</p>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <h3>Cursos Disponíveis</h3>
+            <p>Explore nossa grade de cursos técnicos e profissionalizantes com foco no mercado de trabalho.</p>
+            <a href="#" class="btn-action">Ver Cursos</a>
+        </div>
+
+        <div class="card">
+            <h3>Área do Aluno</h3>
+            <p>Acesse suas notas, frequência e materiais didáticos de forma rápida e segura.</p>
+            <a href="/login" class="btn-action">Acessar Painel</a>
+        </div>
+
+        <div class="card">
+            <h3>Vagas de Emprego</h3>
+            <p>Conecte-se com as melhores indústrias da região através do nosso banco de oportunidades.</p>
+            <a href="#" class="btn-action">Buscar Vagas</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SENAI - Serviço Nacional de Aprendizagem Industrial
+    </footer>
+
+</body>
+</html>
