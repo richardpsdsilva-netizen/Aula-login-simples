@@ -122,6 +122,10 @@
 
         <form action="/cadastro" method="post">
             <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="nome" id="nome" name="nome" placeholder="Digite seu Nome" required>
+            </div>
+            <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
             </div>
@@ -131,8 +135,8 @@
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </div>
             {% if erro_do_usuario %}
-            <p style="color: #ed1c24;">{{erro_do_usuario}}</p>
-        {% endif %}
+                <p style="color: #ed1c24;">{{erro_do_usuario}}</p>
+            {% endif %}
 
             <button type="submit">CADASTRAR</button>
         </form>
